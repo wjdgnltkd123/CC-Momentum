@@ -7,25 +7,25 @@ const HIDDEN = "hidden";
 const USERNAME_KEY = "username";
 
 const showGreeting = (username) => {
-    greeting.innerText = `Hello ${username}`;
-    greeting.classList.remove(HIDDEN);
+  greeting.innerText = `Hello ${username}`;
+  greeting.classList.remove(HIDDEN);
 };
 
 const loginEvent = (event) => {
-    event.preventDefault();
-    const username = loginInput.value;
-    loginForm.classList.add(HIDDEN);
+  event.preventDefault();
+  const username = loginInput.value;
+  loginForm.classList.add(HIDDEN);
 
-    showGreeting(username);
+  showGreeting(username);
 
-    localStorage.setItem(USERNAME_KEY, username);
+  localStorage.setItem(USERNAME_KEY, username);
 };
 
 const savedusername = localStorage.getItem(USERNAME_KEY);
 
 if (savedusername === null || savedusername === "") {
-    loginForm.classList.remove(HIDDEN);
-    loginForm.addEventListener("submit", loginEvent);
+  loginForm.classList.remove(HIDDEN);
+  loginForm.addEventListener("submit", loginEvent);
 } else {
-    showGreeting(savedusername);
+  showGreeting(savedusername);
 }
