@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Momentum Clone</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <form id="login-form" class="hidden">
+        <input type="text" placeholder="What is your name?" required maxlength="15" />
+        <button type="submit">login</button>
+    </form>
+    <h1 id="greeting" class="hidden"></h1>
+    <script src="app.js"></script>
 </body>
 </html>
