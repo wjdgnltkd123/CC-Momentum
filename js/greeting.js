@@ -23,7 +23,7 @@ const loginEvent = (event) => {
 
 const savedusername = localStorage.getItem(USERNAME_KEY);
 
-if (savedusername === null || savedusername === "") {
+if (!savedusername) {
   loginForm.classList.remove(HIDDEN);
   loginForm.addEventListener("submit", loginEvent);
 } else {
