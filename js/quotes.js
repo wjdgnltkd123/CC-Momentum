@@ -44,10 +44,6 @@ const quotes = [
 const quote = document.querySelector("#quote-text");
 const author = document.querySelector("#quote-author");
 
-const randomNextInt = (min, max) => {
-  return Math.floor(Math.random() * (max - min)) + min;
-};
-
 const showQuote = () => {
   const randomIndex = randomNextInt(0, quotes.length);
   const randomQuote = quotes[randomIndex];
