@@ -90,6 +90,7 @@ body {
   margin-top: 20px;
   padding: 0;
   list-style-type: none;
+  min-width: 320px;
 }
 
 #todo-list li {
