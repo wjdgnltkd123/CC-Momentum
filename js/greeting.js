@@ -7,8 +7,36 @@ const HIDDEN = "hidden";
 const USERNAME_KEY = "username";
 
 const showGreeting = (username) => {
-  greeting.innerText = `Hello ${username}`;
+  const clock = document.querySelector("#clock");
+  const weather = document.querySelector("#weather");
+  const todo = document.querySelector("#todo-list");
+  const todoForm = document.querySelector("#todo-form");
+  const quotes = document.querySelector("#quote");
+
+  const hour = new Date().getHours();
+  let greetingText;
+  switch (true) {
+    case hour >= 5 && hour < 12:
+      greetingText = "Good Morning";
+      break;
+    case hour >= 12 && hour < 18:
+      greetingText = "Good Afternoon";
+      break;
+    case hour >= 18 && hour < 22:
+      greetingText = "Good Evening";
+      break;
+    case hour >= 22 || hour < 5:
+      greetingText = "Good Night";
+      break;
+  }
+
+  greeting.innerText = `${greetingText}, ${username}`;
   greeting.classList.remove(HIDDEN);
+  clock.classList.remove(HIDDEN);
+  weather.classList.remove(HIDDEN);
+  todo.classList.remove(HIDDEN);
+  todoForm.classList.remove(HIDDEN);
+  quotes.classList.remove(HIDDEN);
 };
 
 const loginEvent = (event) => {

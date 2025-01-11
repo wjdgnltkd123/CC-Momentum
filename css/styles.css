@@ -1,5 +1,5 @@
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 html,
@@ -35,4 +35,78 @@ body {
   color: white;
   font-size: 2em;
   text-align: center;
+}
+
+#greeting {
+  color: white;
+  margin: 0;
+}
+
+#quote {
+  color: white;
+  position: absolute;
+  bottom: 20px;
+}
+
+#clock {
+  color: white;
+  font-size: 7em;
+  margin: 0;
+}
+
+#weather {
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: center;
+}
+
+#weather span {
+  display: block;
+}
+
+#todo-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#todo-form h2 {
+  color: white;
+  font-weight: normal;
+  margin-top: 50px;
+}
+
+#todo-form input {
+  border: none;
+  border-bottom: 3px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}
+
+#todo-list {
+  margin-top: 20px;
+  padding: 0;
+  list-style-type: none;
+}
+
+#todo-list li {
+  color: white;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+#todo-list li button {
+  opacity: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 1em;
+  padding: 5px 10px;
+  transition: opacity 0.5s ease;
+}
+
+#todo-list li:hover button {
+  opacity: 1;
 }

@@ -48,8 +48,8 @@ const showQuote = () => {
   const randomIndex = randomNextInt(0, quotes.length);
   const randomQuote = quotes[randomIndex];
 
-  quote.innerText = randomQuote.quote;
-  author.innerText = randomQuote.author;
+  quote.innerText = `"${randomQuote.quote}"`;
+  author.innerText = `- ${randomQuote.author}`;
 };
 
 showQuote();

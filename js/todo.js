@@ -14,7 +14,7 @@ const saveTodos = () => {
 };
 
 const removeTodo = (event) => {
-  const todo = event.target.previousSibling.innerText;
+  const todo = event.target.nextSibling.innerText;
   const li = event.target.parentElement;
   const id = parseInt(li.getAttribute("todo-id"));
   li.remove();
@@ -45,8 +45,8 @@ const addTodo = (todo, id, isInit) => {
   button.innerText = "❌";
   button.addEventListener("click", removeTodo);
 
-  li.appendChild(span);
   li.appendChild(button);
+  li.appendChild(span);
   li.setAttribute("todo-id", newId);
   todoList.appendChild(li);
 
